@@ -11,11 +11,11 @@ class UserRoles:
 
 
 class User(AbstractBaseUser):
-    first_name = models.CharField(max_lengh=200)
-    last_name = models.CharField(max_lengh=200)
-    phone = models.CharField(max_lengh=12)
-    email = models.EmailField(max_lengh=100, unique=True)
-    role = models.CharField(max_lengh=15, choices=(("admin", "admin"), ("user", "user")))
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    phone = models.CharField(max_length=12)
+    email = models.EmailField(max_length=100, unique=True)
+    role = models.CharField(max_length=15, choices=(("admin", "admin"), ("user", "user")))
     is_activate = models.BooleanField()
 
     USERNAME_FIELD = 'email'
