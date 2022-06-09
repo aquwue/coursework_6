@@ -11,7 +11,13 @@ class Ad(models.Model):
     title = models.CharField(max_length=20, validators=[MinLengthValidator(10)])
     price = models.PositiveIntegerField(validators=[MinLengthValidator(0)])
     description = models.TextField(max_length=1000, null=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey (
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="ads",
+        verbose_name="Автор объявления",
+        help_text="Выберите автора объявления",
+    )
     created_at = models.DateTimeField(datetime.datetime)
 
     class Meta:
