@@ -3,7 +3,7 @@
 
 from django.contrib import admin
 
-from skymarket.ads.models import Comment, Ad
+from ads.models import Comment, Ad
 
 
 admin.site.register(Ad)

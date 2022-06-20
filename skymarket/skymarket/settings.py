@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework_simplejwt",
     "corsheaders",
-    "drf-spectacular",
+    # "drf-spectacular",
     "rest_framework",
     "users",
     "ads",
